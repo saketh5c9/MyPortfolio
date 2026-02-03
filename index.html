@@ -1,91 +1,172 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saketh Mustyala - Portfolio</title>
+    <title>Saketh Mustyala | Senior Pega Consultant & Associate Architect</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <!-- Three.js Canvas -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">SM</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <!-- Gradient Orbs -->
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
+    <!-- Navigation - macOS Dock Style -->
+    <nav class="dock-nav">
+        <div class="dock-container">
+            <a href="#home" class="dock-item" data-tooltip="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </a>
+            <a href="#about" class="dock-item" data-tooltip="About">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </a>
+            <a href="#experience" class="dock-item" data-tooltip="Experience">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </a>
+            <a href="#certifications" class="dock-item" data-tooltip="Certifications">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </a>
+            <a href="#projects" class="dock-item" data-tooltip="Projects">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+            </a>
+            <a href="#skills" class="dock-item" data-tooltip="Skills">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </a>
+            <a href="mailto:saketh.5c9@gmail.com" class="dock-item" data-tooltip="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/saketh-mustyala-870a0a32/" target="_blank" class="dock-item" data-tooltip="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/saketh5c9" target="_blank" class="dock-item" data-tooltip="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="greeting">Hi, I'm</span>
-                <span class="name">Saketh Mustyala</span>
+                <span class="greeting">Hello, I'm</span>
+                <span class="name">Saketh <span class="name-highlight">Mustyala</span></span>
             </h1>
-            <p class="hero-subtitle">Full Stack Developer | Android Developer | Cloud Enthusiast</p>
+            <div class="hero-role">
+                <span class="role-text">Senior Pega Consultant</span>
+                <span class="role-divider">•</span>
+                <span class="role-text">Pega SSA & LSA</span>
+                <span class="role-divider">•</span>
+                <span class="role-text">AI Integration</span>
+            </div>
             <p class="hero-description">
-                Crafting innovative solutions with expertise in web development, mobile apps, and cloud technologies
+                Accomplished <span class="text-gradient">Pega Professional</span> with 7+ years of experience delivering high-impact digital transformation solutions across Banking, Insurance, and Telecom sectors. Expert in Agentic AI, Pega Constellation, and Customer Decision Hub.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#projects" class="btn btn-secondary">View My Work</a>
+                <a href="#contact" class="btn btn-primary">
+                    <span>Let's Connect</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    <span>View Projects</span>
+                </a>
             </div>
             <div class="social-links">
-                <a href="mailto:saketh5c9@gmail.com" class="social-link" aria-label="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:saketh.5c9@gmail.com" class="social-link" aria-label="Email" data-tooltip="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </a>
-                <a href="https://github.com/saketh5c9" class="social-link" aria-label="GitHub" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/saketh5c9" class="social-link" aria-label="GitHub" target="_blank" data-tooltip="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 </a>
-                <a href="https://linkedin.com/in/saketh-mustyala" class="social-link" aria-label="LinkedIn" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <a href="https://www.linkedin.com/in/saketh-mustyala-870a0a32/" class="social-link" aria-label="LinkedIn" target="_blank" data-tooltip="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
             </div>
         </div>
         <div class="scroll-indicator">
-            <div class="mouse"></div>
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="about-content">
+                <div class="about-image-container">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-placeholder">
+                            <span class="about-initials">SM</span>
+                            <div class="ai-badge">⚙️ CSSA</div>
+                        </div>
+                        <div class="image-decoration"></div>
+                        <div class="image-dots"></div>
+                    </div>
+                </div>
                 <div class="about-text">
-                    <p>I'm a passionate Full Stack Developer with a strong foundation in computer science and engineering. Currently pursuing my B.Tech at CMR College of Engineering & Technology, I've developed a keen interest in creating innovative solutions that bridge technology and real-world problems.</p>
+                    <p>I'm a <span class="highlight">Senior Pega Consultant / Associate Architect</span> with over 7 years of experience delivering high-impact digital transformation solutions across the <span class="highlight">Banking, Insurance, and Telecom</span> sectors.</p>
                     
-                    <p>With experience spanning web development, Android applications, and cloud technologies, I thrive on building scalable, user-centric applications. My journey includes working with modern frameworks like React, Node.js, and implementing cloud solutions with AWS and Azure.</p>
+                    <p>I have a proven track record in architecting scalable applications using the latest <span class="highlight">Pega 24.x features</span>, including Agentic AI and Pega Constellation. Expert in bridging the gap between complex business requirements and technical execution, with specialized knowledge in Customer Decision Hub (CDH), Sales Automation, and Customer Service frameworks.</p>
+
+                    <p>Beyond work, I love building hobby projects — Android apps, web applications, and experimenting with new technologies. Cricket, Badminton, and Vibecoding keep me energized! 🏏🏸</p>
                     
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3>5+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>15+</h3>
-                            <p>Technologies</p>
-                        </div>
+                    <div class="about-interests">
+                        <span class="interest-tag">🤖 Agentic AI</span>
+                        <span class="interest-tag">⚡ Pega Constellation</span>
+                        <span class="interest-tag">🧠 CDH</span>
+                        <span class="interest-tag">💻 Vibecoding</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-content">
+                        <h3>7+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏢</div>
+                    <div class="stat-content">
+                        <h3>4</h3>
+                        <p>Organizations</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-content">
+                        <h3>3</h3>
+                        <p>Pega Certifications</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-content">
+                        <h3>6+</h3>
+                        <p>Frameworks</p>
                     </div>
                 </div>
             </div>
@@ -95,47 +176,158 @@
     <!-- Experience Section -->
     <section id="experience" class="section experience-section">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Intern - Application Developer</h3>
-                        <h4>Salesforce</h4>
-                        <p class="timeline-date">June 2024 - July 2024</p>
-                        <ul>
-                            <li>Developed a customer loyalty and rewards program using Salesforce</li>
-                            <li>Utilized Salesforce Flows, Apex Classes, and Lightning Web Components</li>
-                            <li>Gained hands-on experience with CRM systems and business process automation</li>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-tabs">
+                    <button class="exp-tab active" data-tab="bluevoir">Bluevoir</button>
+                    <button class="exp-tab" data-tab="eldorado">Eldorado - Pega</button>
+                    <button class="exp-tab" data-tab="verizon">Verizon</button>
+                    <button class="exp-tab" data-tab="areteans">Areteans</button>
+                    <button class="exp-tab" data-tab="tcs">TCS</button>
+                </div>
+                <div class="experience-content">
+                    <div class="exp-panel active" id="bluevoir">
+                        <div class="exp-header">
+                            <h3>Principal Engineer <span class="company-highlight">@ Bluevoir (Pega Practice)</span></h3>
+                            <p class="exp-date">Dec 2022 - Apr 2023 & Dec 2025 - Present</p>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Analyze and work on incoming RFI's and RFP's providing ROM estimates and Project estimates</li>
+                            <li>Worked on scripting critical business demo solutions and storylines alongside Pega sales team</li>
+                            <li>Hands-on experience with latest Pega features: Agentic AI, Knowledge Buddy, Customer Simulation (CS FW), Sales Simulation (SA FW), Voice AI, GenAI Analyze and Blueprint</li>
+                            <li>Built external React portals powered by Pega DX API's using GitHub-Copilot (Claude Opus 4.5)</li>
                         </ul>
+                        <div class="exp-tags">
+                            <span>Agentic AI</span>
+                            <span>Knowledge Buddy</span>
+                            <span>GenAI</span>
+                            <span>DX API</span>
+                        </div>
+                    </div>
+                    <div class="exp-panel" id="eldorado">
+                        <div class="exp-header">
+                            <h3>SME Support - DX API, Constellation <span class="company-highlight">@ Eldorado (Contractor from Bluevoir)</span></h3>
+                            <p class="exp-date">Apr 2023 - Dec 2025</p>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Last Line of Defense for Customer Incidents - final escalation point for high-priority incidents involving Constellation (OOTB/DX API) and Traditional (Theme Cosmos/UI-Kit)</li>
+                            <li>First point of contact for resolving deep-tier technical issues: Screenflow Navigations, DWA, Locking Mechanisms, and complex Routing Logic</li>
+                            <li>Provided critical workarounds and Hotfixes for Constellation and Theme-Cosmos architecture issues</li>
+                            <li>Managed and resolved complex customer incidents within strict SLAs by debugging DX APIs, platform-level exception handling, and core engine code</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>DX API</span>
+                            <span>Constellation</span>
+                            <span>Theme Cosmos</span>
+                            <span>Case Management</span>
+                        </div>
+                    </div>
+                    <div class="exp-panel" id="verizon">
+                        <div class="exp-header">
+                            <h3>Senior Eng Cslt - Application Development <span class="company-highlight">@ OneC - Verizon</span></h3>
+                            <p class="exp-date">May 2022 - Dec 2022</p>
+                        </div>
+                        <ul class="exp-list">
+                            <li>External Integration: Set up REST rules to link external apps with Pega smoothly</li>
+                            <li>Data Management: Created SQLConnect rules to access and control customer data for case needs</li>
+                            <li>Customer Strategy Design: Built strategies to guide the best customer action using the Golden Record</li>
+                            <li>API Development: Developed APIs for both instant and queued communication</li>
+                            <li>Headless Pega Maintenance: Managed errors and kept workflows steady in a headless system</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>REST</span>
+                            <span>SQLConnect</span>
+                            <span>Golden Record</span>
+                            <span>Headless Pega</span>
+                        </div>
+                    </div>
+                    <div class="exp-panel" id="areteans">
+                        <div class="exp-header">
+                            <h3>Pega Developer <span class="company-highlight">@ VMIA - Claims (Contractor from Areteans)</span></h3>
+                            <p class="exp-date">Jan 2021 - May 2022</p>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Agile MLP Delivery: Operated within strict Agile methodology to deliver high-priority MLPs under tight deadlines</li>
+                            <li>Legacy Data Migration: Successfully migrated critical insurance data from legacy systems implementing File Listeners and Data Flows</li>
+                            <li>Core Case Management: Designed and implemented essential case management components including SLAs, Email Outbound, and Correspondence rules</li>
+                            <li>UI/UX Enhancement: Collaborated with UI/UX developers to build "lovable" user components using Skin rules, CSS, Paragraphs, and Sections</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Agile</span>
+                            <span>Data Migration</span>
+                            <span>SLAs</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="exp-panel" id="tcs">
+                        <div class="exp-header">
+                            <h3>Systems Engineer <span class="company-highlight">@ Life Corporate - VIVAT (Contractor from TCS)</span></h3>
+                            <p class="exp-date">Jul 2018 - Jan 2021</p>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Blended Framework Implementation: Worked on specialized blended framework combining Pega Sales Automation and Customer Service</li>
+                            <li>Customer Interaction Management: Applied deep knowledge of Customer Interaction Channels and Intent Tasks</li>
+                            <li>Email Automation: Successfully implemented Email Listeners to automate ingestion and processing of customer communications</li>
+                            <li>Platform Upgrades: Collaborated with project architects to execute Pega platform upgrades ensuring high performance</li>
+                            <li>Production Stability Lead: Served as Single Point of Contact (SPOC) for all production defects and performance issues</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Sales Automation</span>
+                            <span>Customer Service</span>
+                            <span>Email Listeners</span>
+                            <span>Platform Upgrades</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Intern - Android Developer</h3>
-                        <h4>AppZoc Technologies (OPC) Pvt. Ltd.</h4>
-                        <p class="timeline-date">May 2024 - July 2024</p>
-                        <ul>
-                            <li>Developed native Android applications using Kotlin</li>
-                            <li>Created multiple projects including Restaurant Kitchen Management app and Password Manager</li>
-                            <li>Implemented modern Android development practices with Room Database and MVVM architecture</li>
-                        </ul>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="section-subtitle">Professional credentials that validate my expertise 🏆</p>
+            
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🏅</div>
+                    <div class="cert-content">
+                        <h3>Pega Certified Senior System Architect</h3>
+                        <p class="cert-issuer">Pega Systems</p>
+                        <span class="cert-badge">CSSA</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>AWS & Azure Cloud Virtual Internship</h3>
-                        <h4>AICTE EduSkills</h4>
-                        <p class="timeline-date">2024</p>
-                        <ul>
-                            <li>Gained expertise in cloud computing fundamentals</li>
-                            <li>Worked with AWS and Azure services</li>
-                            <li>Deployed and managed cloud-based applications</li>
-                        </ul>
+                <div class="cert-card">
+                    <div class="cert-icon">🎖️</div>
+                    <div class="cert-content">
+                        <h3>Pega Certified System Architect</h3>
+                        <p class="cert-issuer">Pega Systems</p>
+                        <span class="cert-badge">CSA</span>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🧠</div>
+                    <div class="cert-content">
+                        <h3>Pega Certified Decisioning Consultant</h3>
+                        <p class="cert-issuer">Pega Systems</p>
+                        <span class="cert-badge">CDH</span>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">⭐</div>
+                    <div class="cert-content">
+                        <h3>Lead System Architect Part-1</h3>
+                        <p class="cert-issuer">Pega Systems</p>
+                        <span class="cert-badge">LSA</span>
                     </div>
                 </div>
             </div>
@@ -145,75 +337,169 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Restaurant Kitchen Management</h3>
-                        <p>A comprehensive Android app for managing restaurant operations with real-time order tracking, inventory management, and staff coordination features.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Kotlin</span>
-                            <span class="tech-tag">Room DB</span>
-                            <span class="tech-tag">MVVM</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Purple UX Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="section-subtitle">Vibe coded apps — Professional demos & personal projects 💜</p>
+            
+            <!-- Project Tabs -->
+            <div class="project-tabs">
+                <button class="project-tab active" data-tab="pega-dx">
+                    <span class="tab-icon">🔮</span>
+                    <span class="tab-text">Pega DX Leveraged</span>
+                </button>
+                <button class="project-tab" data-tab="personal">
+                    <span class="tab-icon">🚀</span>
+                    <span class="tab-text">Personal Projects</span>
+                </button>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
+            <!-- Tab Content: Pega DX Leveraged -->
+            <div class="tab-content active" id="pega-dx">
+                <p class="tab-description">Client demos showcasing Pega DX API integration capabilities</p>
+                <div class="projects-grid pega-grid">
+                    <article class="project-card pega-card">
+                        <div class="project-preview">
+                            <div class="preview-gradient"></div>
+                            <span class="preview-emoji">🎁</span>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Password & Subscriptions Manager</h3>
-                        <p>Secure Android application for managing passwords and tracking subscriptions with encryption, biometric authentication, and reminder notifications.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Kotlin</span>
-                            <span class="tech-tag">Encryption</span>
-                            <span class="tech-tag">Biometric Auth</span>
+                        <div class="project-content">
+                            <h3 class="project-title">Loyalty Builder <span class="title-emoji">🎁</span></h3>
+                            <p class="project-description">Full-stack prototype for designing customer loyalty programs with AI assistance. React + Vite front-end with Express API that proxies chat to Pega Launchpad AI Agent.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Pega DX API</span>
+                                <span>Pega AI Agent</span>
+                                <span>Express</span>
+                                <span>OAuth 2.0</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
+                    <article class="project-card pega-card">
+                        <div class="project-preview">
+                            <div class="preview-gradient"></div>
+                            <span class="preview-emoji">🏦</span>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Badminton Tournament Manager</h3>
-                        <p>Full-stack web application for organizing and managing badminton tournaments with real-time scoring, player registration, and bracket generation.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
+                        <div class="project-content">
+                            <h3 class="project-title">Mobile Banking POC <span class="title-emoji">🏦</span></h3>
+                            <p class="project-description">Android mobile banking app that demonstrates Pega DX API integration for raising dispute cases with OAuth 2.0 authentication.</p>
+                            <div class="project-tech">
+                                <span>Kotlin</span>
+                                <span>Jetpack Compose</span>
+                                <span>Pega DX API</span>
+                                <span>OAuth 2.0</span>
+                                <span>REST API</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
+                    <article class="project-card pega-card">
+                        <div class="project-preview">
+                            <div class="preview-gradient"></div>
+                            <span class="preview-emoji">📋</span>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Customer Loyalty Program</h3>
-                        <p>Salesforce-based rewards system with automated point calculation, tier management, and personalized customer engagement features.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Salesforce</span>
-                            <span class="tech-tag">Apex</span>
-                            <span class="tech-tag">LWC</span>
+                        <div class="project-content">
+                            <h3 class="project-title">Screening Portal <span class="title-emoji">📋</span></h3>
+                            <p class="project-description">React candidate portal for CV submission and assignment management. Features Pega DX metadata-driven guided flows and real-time worklist integration.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>Pega DX API</span>
+                                <span>OAuth 2.0</span>
+                                <span>TypeScript</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
+            </div>
+
+            <!-- Tab Content: Personal Projects -->
+            <div class="tab-content" id="personal">
+                <p class="tab-description">Fun projects I build in my spare time — e-Commerce, Badminton 🏸 & Vibecoding 💻</p>
+                <div class="projects-grid personal-grid">
+                    <article class="project-card personal-card">
+                        <div class="project-preview">
+                            <div class="preview-gradient personal"></div>
+                            <span class="preview-emoji">🏸</span>
+                            <a href="https://github.com/saketh5c9/Badminton-Tourney" target="_blank" class="preview-url">github.com/saketh5c9/Badminton-Tourney</a>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Badminton Tournament Manager <span class="title-emoji">🏸</span></h3>
+                            <p class="project-description">Full-stack tournament management app for my badminton hobby! Features bracket generation, real-time scoring, and player rankings.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Socket.io</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://badminton-tourney.onrender.com" class="live-btn" target="_blank">
+                                    <span>Live</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card personal-card">
+                        <div class="project-preview">
+                            <div class="preview-gradient personal"></div>
+                            <span class="preview-emoji">🔐</span>
+                            <a href="https://github.com/saketh5c9/PasswordManager" target="_blank" class="preview-url">github.com/saketh5c9/PasswordManager</a>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Password & Subscriptions Manager <span class="title-emoji">🔐</span></h3>
+                            <p class="project-description">Android app to securely manage passwords with biometric authentication. Also tracks subscriptions to avoid surprise renewals.</p>
+                            <div class="project-tech">
+                                <span>Kotlin</span>
+                                <span>Room DB</span>
+                                <span>Biometric API</span>
+                                <span>Encryption</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/saketh5c9/PasswordManager" class="github-link" target="_blank">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card personal-card">
+                        <div class="project-preview">
+                            <div class="preview-gradient personal"></div>
+                            <span class="preview-emoji">🏪</span>
+                            <a href="https://github.com/saketh5c9/rkm" target="_blank" class="preview-url">github.com/saketh5c9/rkm</a>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">RKM - Ramesh Kirana Merchant <span class="title-emoji">🏪</span></h3>
+                            <p class="project-description">Comprehensive order management system with real-time WebSocket updates. Features order tracking, inventory management, and admin panel.</p>
+                            <div class="project-tech">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>MongoDB</span>
+                                <span>WebSocket</span>
+                                <span>JWT</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://rkm-ccbu.onrender.com" class="live-btn" target="_blank">
+                                    <span>Live</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="more-projects">
+                <a href="https://github.com/saketh5c9" target="_blank" class="btn btn-outline">
+                    <span>View More on GitHub</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -221,71 +507,102 @@
     <!-- Skills Section -->
     <section id="skills" class="section skills-section">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="section-subtitle">Technologies & frameworks I work with 🛠️</p>
+
+            <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Frontend Development</h3>
+                    <div class="skill-category-header">
+                        <span class="skill-icon">⚙️</span>
+                        <h3>Pega Platform</h3>
+                    </div>
                     <div class="skills-list">
-                        <span class="skill-item">HTML5</span>
-                        <span class="skill-item">CSS3</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">React.js</span>
-                        <span class="skill-item">TypeScript</span>
+                        <span class="skill-item">Agentic AI</span>
+                        <span class="skill-item">Pega Constellation</span>
+                        <span class="skill-item">GenAI Blueprint</span>
+                        <span class="skill-item">Knowledge Buddy</span>
+                        <span class="skill-item">Pega Cloud</span>
+                        <span class="skill-item">DX API v1/v2</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Backend Development</h3>
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🧠</span>
+                        <h3>Decision Hub & AI</h3>
+                    </div>
                     <div class="skills-list">
+                        <span class="skill-item">CDH</span>
+                        <span class="skill-item">Strategy Design</span>
+                        <span class="skill-item">Customer Golden Record</span>
+                        <span class="skill-item">NBA</span>
+                        <span class="skill-item">GenAI Analyze</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🔗</span>
+                        <h3>Integration</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-item">REST</span>
+                        <span class="skill-item">SQLConnect</span>
+                        <span class="skill-item">Kafka Data Sets</span>
+                        <span class="skill-item">File/Email Listeners</span>
+                        <span class="skill-item">Headless Pega</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">📊</span>
+                        <h3>Frameworks</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-item">Customer Service</span>
+                        <span class="skill-item">Sales Automation</span>
+                        <span class="skill-item">Claims</span>
+                        <span class="skill-item">Smart Disputes</span>
+                        <span class="skill-item">Alerts & Investigation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🛠️</span>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-item">PDC</span>
+                        <span class="skill-item">Tracer</span>
+                        <span class="skill-item">PAL</span>
+                        <span class="skill-item">App Studio</span>
+                        <span class="skill-item">Blueprint</span>
+                        <span class="skill-item">GitHub-Copilot</span>
+                        <span class="skill-item">n8n</span>
+                         <span class="skill-item">NotebookLM</span>
+                        <span class="skill-item">Gemini, ChatGPT</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">💻</span>
+                        <h3>Hobby Stack</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-item">React</span>
                         <span class="skill-item">Node.js</span>
-                        <span class="skill-item">Express.js</span>
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">REST APIs</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Mobile Development</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Kotlin</span>
-                        <span class="skill-item">Android Studio</span>
-                        <span class="skill-item">Room Database</span>
-                        <span class="skill-item">MVVM</span>
-                        <span class="skill-item">Material Design</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Database & Cloud</h3>
-                    <div class="skills-list">
+                        <span class="skill-item">TypeScript</span>
                         <span class="skill-item">MongoDB</span>
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">Azure</span>
-                        <span class="skill-item">Firebase</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Salesforce</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Apex</span>
-                        <span class="skill-item">LWC</span>
-                        <span class="skill-item">Flows</span>
-                        <span class="skill-item">SOQL</span>
-                        <span class="skill-item">CRM</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">GitHub</span>
-                        <span class="skill-item">VS Code</span>
-                        <span class="skill-item">Postman</span>
-                        <span class="skill-item">Figma</span>
+                        <span class="skill-item">Kotlin</span>
+                        <span class="skill-item">Cloudinary</span>
+                        <span class="skill-item">Onrender</span>
                     </div>
                 </div>
             </div>
@@ -295,30 +612,52 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-header centered">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            
             <div class="contact-content">
-                <p class="contact-description">
-                    I'm currently looking for new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out!
-                </p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <a href="mailto:saketh5c9@gmail.com">saketh5c9@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        <a href="https://github.com/saketh5c9" target="_blank">github.com/saketh5c9</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        <a href="https://linkedin.com/in/saketh-mustyala" target="_blank">linkedin.com/in/saketh-mustyala</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        <span>Hyderabad, Telangana, India</span>
-                    </div>
+                <div class="contact-text">
+                    <h3>Let's Build Something Great! 🚀</h3>
+                    <p>Whether you're looking for a Pega expert for your digital transformation project, want to discuss the latest in Agentic AI, or explore collaboration opportunities — I'm always excited to connect!</p>
                 </div>
-                <a href="mailto:saketh5c9@gmail.com" class="btn btn-primary">Send Email</a>
+                
+                <div class="contact-cards">
+                    <a href="mailto:saketh.5c9@gmail.com" class="contact-card">
+                        <div class="contact-card-icon">📧</div>
+                        <div class="contact-card-content">
+                            <h4>Email</h4>
+                            <p>saketh.5c9@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="tel:+919989471040" class="contact-card">
+                        <div class="contact-card-icon">📞</div>
+                        <div class="contact-card-content">
+                            <h4>Phone</h4>
+                            <p>+91-9989471040</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/saketh-mustyala-870a0a32/" target="_blank" class="contact-card">
+                        <div class="contact-card-icon">💼</div>
+                        <div class="contact-card-content">
+                            <h4>LinkedIn</h4>
+                            <p>Saketh Mustyala</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/saketh5c9" target="_blank" class="contact-card">
+                        <div class="contact-card-icon">💻</div>
+                        <div class="contact-card-content">
+                            <h4>GitHub</h4>
+                            <p>github.com/saketh5c9</p>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="mailto:saketh.5c9@gmail.com" class="btn btn-primary btn-large">
+                    <span>Say Hello! 👋</span>
+                </a>
             </div>
         </div>
     </section>
@@ -326,13 +665,16 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Saketh Mustyala. All rights reserved.</p>
-            <p>Designed and Built with ❤️</p>
+            <div class="footer-content">
+                <p class="footer-text">Designed & Built by <span class="footer-highlight">Saketh Mustyala</span></p>
+                <p class="footer-copyright">© 2026 • Made with 💙 and lots of ☕</p>
+            </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
