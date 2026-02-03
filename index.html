@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saketh Mustyala - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Three.js Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SM</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="greeting">Hi, I'm</span>
+                <span class="name">Saketh Mustyala</span>
+            </h1>
+            <p class="hero-subtitle">Full Stack Developer | Android Developer | Cloud Enthusiast</p>
+            <p class="hero-description">
+                Crafting innovative solutions with expertise in web development, mobile apps, and cloud technologies
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
+            </div>
+            <div class="social-links">
+                <a href="mailto:saketh5c9@gmail.com" class="social-link" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+                <a href="https://github.com/saketh5c9" class="social-link" aria-label="GitHub" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://linkedin.com/in/saketh-mustyala" class="social-link" aria-label="LinkedIn" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Full Stack Developer with a strong foundation in computer science and engineering. Currently pursuing my B.Tech at CMR College of Engineering & Technology, I've developed a keen interest in creating innovative solutions that bridge technology and real-world problems.</p>
+                    
+                    <p>With experience spanning web development, Android applications, and cloud technologies, I thrive on building scalable, user-centric applications. My journey includes working with modern frameworks like React, Node.js, and implementing cloud solutions with AWS and Azure.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Intern - Application Developer</h3>
+                        <h4>Salesforce</h4>
+                        <p class="timeline-date">June 2024 - July 2024</p>
+                        <ul>
+                            <li>Developed a customer loyalty and rewards program using Salesforce</li>
+                            <li>Utilized Salesforce Flows, Apex Classes, and Lightning Web Components</li>
+                            <li>Gained hands-on experience with CRM systems and business process automation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Intern - Android Developer</h3>
+                        <h4>AppZoc Technologies (OPC) Pvt. Ltd.</h4>
+                        <p class="timeline-date">May 2024 - July 2024</p>
+                        <ul>
+                            <li>Developed native Android applications using Kotlin</li>
+                            <li>Created multiple projects including Restaurant Kitchen Management app and Password Manager</li>
+                            <li>Implemented modern Android development practices with Room Database and MVVM architecture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>AWS & Azure Cloud Virtual Internship</h3>
+                        <h4>AICTE EduSkills</h4>
+                        <p class="timeline-date">2024</p>
+                        <ul>
+                            <li>Gained expertise in cloud computing fundamentals</li>
+                            <li>Worked with AWS and Azure services</li>
+                            <li>Deployed and managed cloud-based applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Restaurant Kitchen Management</h3>
+                        <p>A comprehensive Android app for managing restaurant operations with real-time order tracking, inventory management, and staff coordination features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Room DB</span>
+                            <span class="tech-tag">MVVM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Password & Subscriptions Manager</h3>
+                        <p>Secure Android application for managing passwords and tracking subscriptions with encryption, biometric authentication, and reminder notifications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Encryption</span>
+                            <span class="tech-tag">Biometric Auth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Badminton Tournament Manager</h3>
+                        <p>Full-stack web application for organizing and managing badminton tournaments with real-time scoring, player registration, and bracket generation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/saketh5c9" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Customer Loyalty Program</h3>
+                        <p>Salesforce-based rewards system with automated point calculation, tier management, and personalized customer engagement features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Salesforce</span>
+                            <span class="tech-tag">Apex</span>
+                            <span class="tech-tag">LWC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">TypeScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Express.js</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Kotlin</span>
+                        <span class="skill-item">Android Studio</span>
+                        <span class="skill-item">Room Database</span>
+                        <span class="skill-item">MVVM</span>
+                        <span class="skill-item">Material Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Database & Cloud</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">Azure</span>
+                        <span class="skill-item">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Salesforce</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Apex</span>
+                        <span class="skill-item">LWC</span>
+                        <span class="skill-item">Flows</span>
+                        <span class="skill-item">SOQL</span>
+                        <span class="skill-item">CRM</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">GitHub</span>
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Postman</span>
+                        <span class="skill-item">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    I'm currently looking for new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:saketh5c9@gmail.com">saketh5c9@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <a href="https://github.com/saketh5c9" target="_blank">github.com/saketh5c9</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://linkedin.com/in/saketh-mustyala" target="_blank">linkedin.com/in/saketh-mustyala</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Hyderabad, Telangana, India</span>
+                    </div>
+                </div>
+                <a href="mailto:saketh5c9@gmail.com" class="btn btn-primary">Send Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Saketh Mustyala. All rights reserved.</p>
+            <p>Designed and Built with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
